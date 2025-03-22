@@ -3,31 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>3D Flying Game</title>
+    <title>Three.js Flying Game</title>
     <style>
-        body { margin: 0; overflow: hidden; }
-        canvas { display: block; }
+        body { margin: 0; overflow: hidden; font-family: Arial, sans-serif; }
+        canvas { display: none; } /* गेम तब तक नहीं दिखेगा जब तक नाम एंटर न हो */
         #startScreen {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            background: black;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-direction: column;
-            color: white;
-            font-size: 20px;
+            position: absolute; width: 100%; height: 100%;
+            background: #000; display: flex; flex-direction: column;
+            justify-content: center; align-items: center; color: white;
         }
+        input { padding: 10px; font-size: 18px; margin: 10px; }
+        button { padding: 10px 20px; font-size: 18px; cursor: pointer; }
     </style>
 </head>
 <body>
     <div id="startScreen">
-        <h2>Enter Your Name to Start</h2>
+        <h2>Enter Your Name</h2>
         <input type="text" id="playerName" placeholder="Your Name">
         <button onclick="startGame()">Start Game</button>
     </div>
-    <script src="three.js"></script>
-    <script src="game.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
